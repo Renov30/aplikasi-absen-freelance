@@ -12,7 +12,7 @@ $user = mysqli_fetch_assoc($result);
 
 if ($user && password_verify($pass, $user['password'])) {
     $_SESSION['username'] = $username;
-    header("dashboard.php");
+    header("Location: dashboard.php");
 } else {
     echo "Login gagal!";
 }
