@@ -7,6 +7,6 @@ function loadApp(appUrl) {
     .catch((error) => console.log("Gagal memuat aplikasi:", error));
 }
 
-function logout() {
-  window.location.href = "logout.php";
-}
+// function logout() {
+//   window.location.href = "logout.php";
+// }

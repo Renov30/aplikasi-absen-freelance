@@ -21,7 +21,7 @@ if (!isset($_SESSION['username'])) {
             <table>
                 <tr>
                     <td>
-                        <a href="" onclick="loadApp('app/absen.php')"><img
+                        <a href="#" onclick="loadApp('app/absen.php')"><img
                                 src="img/icon/computer_2_cool-4.png"
                                 title="Absen"
                                 alt="Absen" /></a>
@@ -29,12 +29,12 @@ if (!isset($_SESSION['username'])) {
                 </tr>
                 <tr>
                     <td>
-                        <a href="" onclick="loadApp('app/notes.php')"><img src="img/icon/notepad-2.png" title="Notes" alt="Notes" /></a>
+                        <a href="#" onclick="loadApp('app/notes.php')"><img src="img/icon/notepad-2.png" title="Notes" alt="Notes" /></a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="" onclick="loadApp('app/money.php')"><img src="img/icon/rename-2.png" title="Money" alt="Money" /></a>
+                        <a href="#" onclick="loadApp('app/money.php')"><img src="img/icon/rename-2.png" title="Money" alt="Money" /></a>
                     </td>
                 </tr>
             </table>
