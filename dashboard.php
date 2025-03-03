@@ -16,7 +16,18 @@ if (!isset($_SESSION['username'])) {
 </head>
 
 <body>
-    <h2>Ini adalah dashboard</h2>
+    <!-- <h2>Ini adalah dashboard</h2> -->
+    <table>
+        <tr>
+            <td><img src="img/icon/computer_2_cool-4.png" alt=""></td>
+        </tr>
+        <tr>
+            <td><img src="img/icon/notepad-2.png" alt=""></td>
+        </tr>
+        <tr>
+            <td><img src="img/icon/rename-2.png" alt=""></td>
+        </tr>
+    </table>
 </body>
 
 </html>
