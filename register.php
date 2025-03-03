@@ -2,7 +2,7 @@
 include 'koneksi.php';
 
 $username  = $_POST['username'];
-$pass  = $_POST['password'];
+$pass  = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 $query_cek = "select * from users where username= '$username' ";
 $query_daftar = "insert into users (username, password) values ('$username', '$pass')";
