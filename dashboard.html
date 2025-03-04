@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ambil username dari session.php
+        fetch("session.php")
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById("username").textContent = data.username;
+          })
+          .catch((error) =>
+            console.error("Error fetching session data:", error)
+          );
+      });
+
+      function loadApp(url) {
+        document.getElementById(
+          "app-container"
+        ).innerHTML = `<iframe src="${url}" width="100%" height="400px" frameborder="0"></iframe>`;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="icon">
+        <table>
+          <tr>
+            <td>
+              <a href="#" onclick="loadApp('app/absen.php')"
+                ><img
+                  src="img/icon/computer_2_cool-4.png"
+                  title="Absen"
+                  alt="Absen"
+              /></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#" onclick="loadApp('app/notes.php')"
+                ><img src="img/icon/notepad-2.png" title="Notes" alt="Notes"
+              /></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#" onclick="loadApp('app/money.php')"
+                ><img src="img/icon/rename-2.png" title="Money" alt="Money"
+              /></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="content" id="app-container">
+        <h2>Welcome, <span id="username">Loading...</span></h2>
+      </div>
+    </div>
+  </body>
+</html>
